@@ -1,0 +1,13 @@
+open terminal in sbin folder
+type: start-dfs.sh
+type: start-yarn.sh
+type: jps
+create a new folder in sbin folder: hdfs dfs -mkdir /sumit
+
+create a new file in home directory e.g sumitFile.txt and enter some text in it
+
+type :hadoop fs -put /home/hadoop/sumitFile.txt /sumit 
+
+type: yarn jar /home/hadoop/hadoop-3.3.5/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar wordcount /sumit /sumitOutput
+Note-> (sumit is folder name and sumitOutput is the output file)
+type: hdfs dfs -cat /sumitOutput/part-r-00000

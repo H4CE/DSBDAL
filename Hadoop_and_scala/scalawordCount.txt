@@ -1,0 +1,13 @@
+spark shell
+
+var x=sc.textFile("abc.txt")
+
+var y=x.flatMap(_.split(" "))
+
+var z=y.map((_,1))
+
+var w=z.reduceByKey(_+_)
+
+w.saveAsTextFile("abc.txt")
+
+w.foreach(println)

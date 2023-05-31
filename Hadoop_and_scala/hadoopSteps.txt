@@ -1,0 +1,20 @@
+1.Open the terminal in sbin folder
+type:
+    start-dfs.sh
+    start-yarn.sh
+    jps
+
+2.create a folder
+type:
+    hdfs dfs -mkdir /folder
+
+3. Crete a text file in the HOME directory and add some words in it
+
+4.put the text file in the folder
+    type: hadoop fs -put /home/hadoop/file.txt /folder
+
+5. use the yarn command
+    yarn jar "jar file path" wordcount /folder /output
+
+6. see the output
+    type: hdfs dfs -cat /outputFile/part-r-00000
